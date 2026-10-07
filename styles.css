@@ -59,8 +59,6 @@ header h1 {
     background-color: rgba(245, 245, 220, 0.719);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    cursor: pointer;
-    transform: scale(1);
     transition: all 0.3s ease;
 }
 header h1:hover {
