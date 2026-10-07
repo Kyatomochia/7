@@ -1,0 +1,380 @@
+/* ============================================================
+   PLIK STYLÓW CSS - ZADANIE HTML + CSS
+   ============================================================
+   
+   INSTRUKCJE:
+   - Style przypisuj za pomocą klas (class) oraz selektorów elementów.
+   - Nie używaj atrybutów style="" bezpośrednio w HTML (inline styles).
+   - Uzupełnij poniższe reguły stylów zgodnie z komentarzami.
+   
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   RESET / PODSTAWOWE USTAWIENIA
+   ------------------------------------------------------------ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 
+        STYL BODY
+        - Ustaw font-family (np. Arial, sans-serif)
+        - Ustaw kolor tła i tekstu
+        - Ustaw line-height dla lepszej czytelności
+    */
+    font-family: 'Times New Roman', Times, serif;
+    background-color: beige;
+    color: burlywood;
+    line-height: 20px;
+}
+
+
+/* ------------------------------------------------------------
+   HEADER
+   ------------------------------------------------------------ */
+header {
+    /* 
+        STYL HEADER
+        - Ustaw tło (background-color)
+        - Ustaw padding
+        - Ustaw tekst na środku lub wyrównaj
+        - Możesz dodać border-bottom
+    */
+    background-color: rgba(240, 255, 255, 0.856);
+    padding: auto;
+    align-items: center;
+    border-bottom: 2px;
+}
+
+header h1 {
+    /* Styl nagłówka h1 w headerze */
+    color: rgba(160, 160, 136, 0.781);
+    font-size: 50px;
+    padding: 20px;
+    margin: auto;
+    background-color: rgba(245, 245, 220, 0.719);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+header h1:hover {
+    /* Efekt hover dla nagłówka h1 */
+    color: black;
+    
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transform: scaleY(-1.1);
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(250, 250, 208, 0.637);
+}
+header p{
+    color: rgba(160, 160, 136, 0.781);
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgba(245, 245, 220, 0.719);
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+header p:hover {
+
+    color: black;
+    background-color: rgba(250, 250, 208, 0.637);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transform: scale(1.2);
+}
+
+/* ------------------------------------------------------------
+   NAV
+   ------------------------------------------------------------ */
+nav {
+    /* 
+        STYL NAV
+        - Tło, padding
+    */
+    background-color: rgba(245, 245, 220, 0.719);
+    padding: 10px;
+}
+
+nav ul {
+    /* 
+        Lista w nawigacji
+        - list-style: none;
+        - display: flex; (lub inline)
+        - gap między elementami
+    */
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    /* Style linków w nav */
+    text-decoration: none;
+    color: rgba(160, 160, 136, 0.781);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: black;
+}
+/* ------------------------------------------------------------
+   CONTAINER (main + aside)
+   ------------------------------------------------------------ */
+.container {
+    /* 
+        KONTENER GŁÓWNY
+        - Użyj display: flex; lub display: grid;
+        - Aby main i aside były obok siebie
+        - max-width i margin: 0 auto; (wyśrodkowanie)
+        - padding
+    */
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main {
+    /* 
+        STYL MAIN
+        - flex: 1; lub width (np. 70%)
+        - padding
+    */
+    flex: 1;
+    padding: 20px;
+}
+
+aside {
+    /* 
+        STYL ASIDE
+        - width (np. 30% lub 250px)
+        - background-color
+        - padding
+        - border (opcjonalnie)
+    */
+    width: 250px;
+    background-color: rgba(245, 245, 220, 0.719);
+    padding: 20px;
+}
+
+
+/* ------------------------------------------------------------
+   SEKCJE W MAIN
+   ------------------------------------------------------------ */
+section {
+    /* 
+        STYL SEKCJI
+        - margin-bottom
+        - padding
+    */
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+section h2 {
+    /* Styl nagłówków sekcji */
+    color: rgba(160, 160, 136, 0.781);
+    font-size: 36px;
+    background-color: rgba(245, 245, 220, 0.719);
+}
+
+
+/* ------------------------------------------------------------
+   LISTY
+   ------------------------------------------------------------ */
+/* 
+    LISTA NUMEROWANA (ol)
+    - Dodaj style dla ol i li
+    - Możesz zmienić kolor numerów, odstępy itp.
+*/
+ol {
+    color: rgba(160, 160, 136, 0.781);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+ol li {
+    color: rgba(160, 160, 136, 0.781);
+    margin-bottom: 5px;
+}
+
+/* 
+    LISTA PUNKTOWANA (ul)
+    - Dodaj style dla ul i li
+    - Możesz zmienić rodzaj punktów (list-style-type)
+*/
+ul {
+    color: rgba(160, 160, 136, 0.781);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+ul li {
+    color: rgba(160, 160, 136, 0.781);
+    margin-bottom: 5px;
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+
+/* ------------------------------------------------------------
+   TABELA
+   ------------------------------------------------------------ */
+/* 
+    TABELA
+    - Nadaj klasę tabeli w HTML (np. .tabela-danych)
+    - Ustaw border-collapse: collapse;
+    - Style dla th i td (padding, border, text-align)
+    - Możesz dodać tło dla thead
+*/
+.tabela-danych {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabela-danych th,
+.tabela-danych td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: left;
+}
+
+.tabela-danych thead {
+    background-color: #f2f2f2;
+}
+
+.tabela-danych tbody tr:nth-child(even) {
+    /* Opcjonalnie: zebra stripes */
+    background-color: #f9f9f9;
+}
+
+
+/* ------------------------------------------------------------
+   OBRAZ
+   ------------------------------------------------------------ */
+/* 
+    OBRAZ
+    - Nadaj klasę obrazowi (np. .obraz-glowny)
+    - max-width: 100%;
+    - border-radius (opcjonalnie)
+    - display: block; margin: auto; (wyśrodkowanie)
+*/
+.obraz-glowny {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ------------------------------------------------------------
+   ELEMENTY BLOKOWE DIV (z margin, padding, border)
+   ------------------------------------------------------------ */
+/* 
+    KLASY DLA DIVÓW
+    Każdy box musi mieć:
+    - margin
+    - padding
+    - border
+    
+    Przykłady klas poniżej - uzupełnij wartości.
+*/
+
+.box {
+    /* Wspólne style dla wszystkich boxów */
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.box-primary {
+    /* 
+        Box główny
+        - border: np. 2px solid #3498db;
+        - padding: np. 15px;
+        - margin: np. 10px 0;
+        - background-color
+    */
+    border: 2px solid #3498db;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #eaf4fc;
+}
+
+.box-primary{
+    /* 
+        Box dodatkowy
+        - inny kolor borderu
+        - inny padding / margin
+    */
+    border: 2px solid #2ecc71;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.box-accent {
+    /* 
+        Box wyróżniony
+        - mocniejszy border lub inny styl
+        - możesz dodać border-radius
+    */
+    border: 2px dashed #e74c3c;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+
+/* ------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------ */
+footer {
+    /* 
+        STYL FOOTER
+        - tło
+        - padding
+        - text-align: center;
+        - margin-top
+    */
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    clear: both;
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+footer p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* ------------------------------------------------------------
+   DODATKOWE STYLE (opcjonalne)
+   ------------------------------------------------------------ */
+/* 
+    Po dodaniu Font Awesome możesz stylować ikony, np.:
+    .fa-solid, .fa-brands {
+        margin-right: 8px;
+        color: #e74c3c;
+    }
+*/
+.fa-solid, .fa-brands {
+        margin-right: 8px;
+        color: #e74c3c;
+        font-size: 20px;
+    }
